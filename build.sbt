@@ -86,8 +86,6 @@ lazy val configLib =  Project("config", file("config"))
     ),
 
     OsgiKeys.exportPackage                 := Seq("com.typesafe.config", "com.typesafe.config.impl"),
-    publish                                := sys.error("use publishSigned instead of plain publish"),
-    publishLocal                           := sys.error("use publishLocalSigned instead of plain publishLocal"),
     Compile / packageBin / packageOptions  +=
       Package.ManifestAttributes("Automatic-Module-Name" -> "typesafe.config" )
   )
